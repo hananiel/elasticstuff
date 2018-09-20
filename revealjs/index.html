@@ -142,10 +142,10 @@
 				<section>
 						<h2>Content Based filtering  </h2>
 						<ul>
-								<li>Recommends items based on a similiarty of the items features and user profile.</li>
-								<li>Each item is represented as a set of descriptors or terms </li>
-								<li>The user profile is represented with the same terms from recorded information</li>. 
-								<li>Items that are mostly related to profile are recommended to the user</li>
+								<li>Recommends items based on a similiarty of the items features and user profile features.</li>
+								<li>Each item is represented as a set of  terms. </li>
+								<li>The user profile is represented with the same terms.</li>
+								<li>Items that are most related to profile are recommended to the user</li>
 								<li>This similarity can be derived by TF/IDF </li>
 						</ul>
 				</section>
@@ -153,6 +153,9 @@
 						<h2>Representing Content based in ElasticSearch  </h2>
 						<ul>
 								<li>Since it can leverage term similarity we can use the elastic search indexes</li>
+								<li>Represent the item(movie/show) as ES document</li>
+								<li>Features are stored in separate fields</li>
+								<li>User becomes the query</li>
 								<li> Reference : <a href="https://www.elastic.co/blog/looking-at-content-recommendation-through-a-search-lens">Recommendation through elastic search lens</a></li>
 								<p></p>
 								
@@ -165,10 +168,10 @@
 								<li>Recommends items based on a similiarty of the items ratings of other users.</li>
 								<li>Premise: users who agreed in their ratings of items in the
 										past will do so in the future </li>
-								<li>Neighborhood: User based vs Item based</li>
-								<li>User-Based approach: group similar users</li>. 
-								<li>Item-Based approach: group similar items and recommend</li>
-								<li>OR Matrix Factorization is an approach(ALS)</li>
+								<li>Neighborhood: User based vs Item based.</li>
+								<li>User-Based approach: group similar users.</li>
+								<li>Item-Based approach: group similar items and recommend.</li>
+								<li>Or Matrix Factorization is an approach(ALS).</li>
 						</ul>
 				</section>
 				<section>
@@ -177,10 +180,10 @@
 						<img src="als.png" height="300px" />
 					
 							<ul style="font-size: 60%">
-								<li>Rij is a rating matrix of Users to Products</li>
+								<li>R<sub>ij</sub> is a rating matrix of Users to Products</li>
 								<li>We have a sparse matrix with some cells filled</li>
 								<li>The solution predicts missing cells</li>
-								<li>It's is decomposed into U users with k factors and P products on k factors</li>
+								<li>It's is decomposed into U<sub>ik</sub> users with k factors and P<sub>kj</sub> products on k factors</li>
 								<li>ALS fixes U and predicts P , fixes P and Predicts U</li>
 							</ul>
 					
