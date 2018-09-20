@@ -65,9 +65,9 @@
 					<h2>Overview</h2>
 				
 					<ul>
-						<li>Search </li>
-						<li>Recommendations</li>
-						<li>Why search and recommendations</li>
+						<li>Search: typical approaches and problems</li>
+						<li>High level overview of Recommender systems</li>
+						<li>Why search and recommendations go hand in hand</li>
 						<li>A few approaches using elastic search</li>
 					</ul>
 					
@@ -77,6 +77,7 @@
 					<h3>Search</h3>
 					<ul>
 						<li>Search is the process of ranking content based on a query. </li>
+						<li class="fragment">We are filtering content</li>
 						<li class="fragment">We need good search to:</li>
 						<p>
 							<li class="fragment">Increase engagement </li>
@@ -97,7 +98,7 @@
 						<p >
 							<ul class="fragment">
 								<li>TF/IDF <a href="https://en.wikipedia.org/wiki/Tf%E2%80%93idf#Example_of_tf%E2%80%93idf">Wiki Example</a></li>
-								<li>DM25 - ElasticSearch default</li>
+								<li>BM25 - ElasticSearch default</li>
 							</ul>
 						</p>
 					
@@ -125,8 +126,7 @@
 						<h2>Recommendation Engines</h2>
 						<ul>
 							<li>What does recommendation have to do with search</li>
-							<li>Recommend things based on context</li>
-							<li>Recommenders filter information based on user’s preferences, interest, or observed behavior about item </li>
+							<li>Recommenders <a href="">filter</a> information based on user’s preferences, interest, or observed behavior about item </li>
 							<li>We can think of it as a mechanism to improve relevance </li>
 							
 						</ul>
@@ -143,7 +143,7 @@
 						<h2>Content Based filtering  </h2>
 						<ul>
 								<li>Recommends items based on a similiarty of the items features and user profile features.</li>
-								<li>Each item is represented as a set of  terms. </li>
+								<li>Each item is represented as a set of terms. </li>
 								<li>The user profile is represented with the same terms.</li>
 								<li>Items that are most related to profile are recommended to the user</li>
 								<li>This similarity can be derived by TF/IDF </li>
@@ -168,7 +168,7 @@
 								<li>Recommends items based on a similiarty of the items ratings of other users.</li>
 								<li>Premise: users who agreed in their ratings of items in the
 										past will do so in the future </li>
-								<li>Neighborhood: User based vs Item based.</li>
+								<li>Neighborhood Based approaches:</li>
 								<li>User-Based approach: group similar users.</li>
 								<li>Item-Based approach: group similar items and recommend.</li>
 								<li>Or Matrix Factorization is an approach(ALS).</li>
@@ -196,6 +196,14 @@
 								<li>Or store the feature vectors in elastic search</li>
 								<li>You can use something like Apache Mahout <a href="https://github.com/codelibs/elasticsearch-taste"> elastictaste plugin</a></li>
 						</ul>
+				</section>
+				<section>
+					<h2>Elastic Search representations</h2>
+					<li>Docker-compose for elasticStack</li>
+					<li>Jupyter Notebook</li>
+					<li>Significant Terms Aggregation</li>
+					<li>Directly storing like items</li>
+
 				</section>
 				<section>
 					<h2>Summary</h2>
