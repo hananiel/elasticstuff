@@ -53,9 +53,9 @@
 						<p>
 							<img src="MeasureCAmpCincinnati.png" height="250px"/>
 							<ul>
-								<li>When: April 27 2019</li>
-								<li>Where: 8451 Offices</li>
-								<li>We need you!</li>
+								<li>When: April 27<sup>th</sup> 2019</li>
+								<li>Where: 8451 </li>
+								<li>Who: You!</li>
 							</ul>
 						</p>
 				</section>
@@ -66,9 +66,9 @@
 				
 					<ul>
 						<li>Search: typical approaches and problems</li>
-						<li>High level overview of Recommender systems</li>
-						<li>Why search and recommendations go hand in hand</li>
-						<li>A few approaches using elastic search</li>
+						<li>Recommenders: typical approaches and overview</li>
+						<li>Bring search and recommendations together</li>
+						<li>A few approaches leveraging elastic search</li>
 					</ul>
 					
 				</section>
@@ -93,11 +93,11 @@
 					<ul>
 						<li>A typical search in your document repository is poor </li>
 						<li>Out of the box solutions don't consider the whole context available</li>
-						<li class="fragment">Typically uses an inverted index</li>
+						<li class="fragment">Typically uses an <a href="https://nlp.stanford.edu/IR-book/html/htmledition/a-first-take-at-building-an-inverted-index-1.html" target="_blank"> inverted index</a></li>
 						<li class="fragment">A ranking scheme  </li>
 						<p >
 							<ul class="fragment">
-								<li>TF/IDF <a href="https://en.wikipedia.org/wiki/Tf%E2%80%93idf#Example_of_tf%E2%80%93idf">Wiki Example</a></li>
+								<li>TF/IDF <a href="https://en.wikipedia.org/wiki/Tf%E2%80%93idf#Example_of_tf%E2%80%93idf" target="_blank">Wiki Example</a></li>
 								<li>BM25 - ElasticSearch default</li>
 							</ul>
 						</p>
@@ -156,7 +156,7 @@
 								<li>Represent the item(movie/show) as ES document</li>
 								<li>Features are stored in separate fields</li>
 								<li>User becomes the query</li>
-								<li> Reference : <a href="https://www.elastic.co/blog/looking-at-content-recommendation-through-a-search-lens">Recommendation through elastic search lens</a></li>
+								<li> Reference : <a href="https://www.elastic.co/blog/looking-at-content-recommendation-through-a-search-lens" target="_blank">Recommendation through elastic search lens</a></li>
 								<p></p>
 								
 						</ul>
@@ -165,7 +165,7 @@
 						<h2>Collaborative filtering  </h2>
 						<ul>
 								
-								<li>Recommends items based on a similiarty of the items ratings of other users.</li>
+								<li>Recommends items based on a similiarty of the item's ratings from other users.</li>
 								<li>Premise: users who agreed in their ratings of items in the
 										past will do so in the future </li>
 								<li>Neighborhood Based approaches:</li>
@@ -192,20 +192,20 @@
 				<section>
 						<h2>Representing Collaborative filter model in ElasticSearch  </h2>
 						<ul>
-								<li>Significant terms aggregation - Search for recommendations</li>
-								<li>Feature selection in text classification can be applied to item as a document model></li>
+								<li>Feature selection in text classification can be applied to item as a document model</li>
 								<li>Directly store like items in fields - Recommendations for search (trivial approach) </li>
 								<li>Or store the feature vectors in elastic search</li>
-								<li>You can use something like Apache Mahout <a href="https://github.com/codelibs/elasticsearch-taste"> elastictaste plugin</a></li>
+								<li>You can use something like Apache Mahout <a href="https://github.com/codelibs/elasticsearch-taste" target="_blank"> elastictaste plugin</a></li>
 						</ul>
 				</section>
 				<section>
 					<h2>Elastic Search representations</h2>
-					<li>Docker-compose for elasticStack</li>
-					<li>Jupyter Notebook</li>
-					<li>Search for recommenSignificant Terms Aggregation - </li>
-					<li>Directly storing like items</li>
-
+					<ul>
+						<li>Docker-compose for elasticStack</li>
+						<li>Jupyter Notebook</li>
+						<li>Search for recommenSignificant Terms Aggregation</li>
+						<li>Directly storing like items</li>
+				</ul>
 				</section>
 				<section>
 					<h2>Summary</h2>
@@ -221,6 +221,7 @@
 					<p >
 					<ul style="font-size: 60%;">
 					
+						<li> <a href="https://www.manning.com/books/relevant-search">Relevent Search</a> By Doug Turnbull, John Berryman</li>
 						<li >https://opensourceconnections.com/blog/2015/10/16/bm25-the-next-generation-of-lucene-relevation/</li>
 						<li>https://www.slideshare.net/vozniuk/multiple-ways-of-building-a-recommender-system-with-elasticsearch-elastic-meetup-switzerland-andrii-vozniuk</li>
 						<li>https://opensourceconnections.com/blog/2016/09/09/better-recsys-elasticsearch/</li>
